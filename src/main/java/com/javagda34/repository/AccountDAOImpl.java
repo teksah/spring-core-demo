@@ -1,13 +1,18 @@
 package com.javagda34.repository;
 
 import com.javagda34.model.Account;
+import org.springframework.context.annotation.Lazy;
+import org.springframework.context.annotation.Primary;
+import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
 import java.util.Optional;
 
 @Repository
+@Primary
 public class AccountDAOImpl implements AccountDAO {
+
     @Override
     public List<Account> findAll() {
         return List.of(
