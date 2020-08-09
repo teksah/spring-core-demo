@@ -11,9 +11,10 @@ public class AccountDAOImpl implements AccountDAO {
     @Override
     public List<Account> findAll() {
         return List.of(
-                new Account(1L, 100d,"Jas", "Fasola"),
-                new Account(2L, 80d,"Janek", "Smietanek"),
-                new Account(3L, 70d,"Krzysiek", "Placek")
+                new Account(1L, 100d, "Jas", "Fasola"),
+                new Account(2L, 80d, "Janek", "Smietanek"),
+                new Account(3L, 70d, "Krzysiek", "Placek"),
+                new Account(999L, 10_000_000d, "Jestem", "Bankiem")
         );
     }
 

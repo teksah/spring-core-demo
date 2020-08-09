@@ -2,12 +2,10 @@ package com.javagda34.service;
 
 import com.javagda34.model.Account;
 import com.javagda34.repository.AccountDAO;
-import com.javagda34.repository.AccountDAOImpl;
 import org.springframework.stereotype.Service;
 
 @Service
 public class TransferServiceImpl implements TransferService {
-    private final AccountDAO accountDAO = new AccountDAOImpl();
 
     @Override
     public void deposit(double amount, Account toAccount) {
