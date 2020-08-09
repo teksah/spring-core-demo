@@ -1,6 +1,7 @@
 package com.javagda34;
 
 import com.javagda34.config.AppConfiguration;
+import com.javagda34.repository.AccountDAOImpl;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
@@ -11,7 +12,11 @@ public class MainApp {
 
         final ApplicationContext context = new AnnotationConfigApplicationContext(AppConfiguration.class);
 
-        System.out.println(Arrays.toString(context.getBeanDefinitionNames()));
+        final AccountDAOImpl accountDAO = context.getBean(AccountDAOImpl.class);
+
+
+        Arrays.stream(context.getBeanDefinitionNames())
+                .forEach(System.out::println);
 
     }
 
