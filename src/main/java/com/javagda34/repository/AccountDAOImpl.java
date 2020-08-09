@@ -1,9 +1,7 @@
 package com.javagda34.repository;
 
 import com.javagda34.model.Account;
-import org.springframework.context.annotation.Lazy;
 import org.springframework.context.annotation.Primary;
-import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;

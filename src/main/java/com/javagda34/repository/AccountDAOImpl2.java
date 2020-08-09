@@ -1,8 +1,6 @@
 package com.javagda34.repository;
 
 import com.javagda34.model.Account;
-import org.springframework.beans.factory.annotation.Qualifier;
-import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;

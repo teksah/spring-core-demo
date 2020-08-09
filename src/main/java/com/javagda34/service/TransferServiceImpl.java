@@ -2,7 +2,6 @@ package com.javagda34.service;
 
 import com.javagda34.model.Account;
 import com.javagda34.repository.AccountDAO;
-import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
 
 @Service
