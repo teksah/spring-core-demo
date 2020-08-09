@@ -14,14 +14,19 @@ public class CreditServiceImpl implements CreditService {
 
 
     @Override
-    public void takeCreditLoad(double amount, Account applicant) {
-        final Account bank = getBankAccount();
-        giveCredit(amount, applicant, bank);
+    public void takeCreditLoad(double amount, Long applicant) {
+        giveCredit(amount, applicant);
     }
 
-    private void giveCredit(double amount, Account applicant, Account bank) {
+    private void giveCredit(double amount, Long applicant) {
+        final Account bank = accountDAO.findById(999L).orElseThrow();
+        final Account account = accountDAO.findById(applicant).orElseThrow();
+        calculate(amount, bank, account);
+    }
+
+    private void calculate(double amount, Account bank, Account account) {
         bank.setBalance(bank.getBalance() - amount);
-        applicant.setBalance(applicant.getBalance() + amount);
+        account.setBalance(account.getBalance() + amount);
     }
 
 
