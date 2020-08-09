@@ -6,6 +6,6 @@
 /dataSources.local.xml
 # Editor-based HTTP Client requests
 /httpRequests/
-spring-boot-demo.iml
+spring-core-demo.iml
 target
 
